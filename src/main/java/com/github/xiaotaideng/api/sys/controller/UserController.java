@@ -24,7 +24,9 @@ public class UserController {
 
     @GetMapping("/")
     public List<UserDO> getList() {
-        return userService.list();
+        UserDO userDO = new UserDO();
+        userDO.setUserId("222");
+        return userService.userList(userDO);
     }
 
 
